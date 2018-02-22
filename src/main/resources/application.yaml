@@ -1,8 +1,5 @@
 spring:
-  profiles.active: prod
----
-spring:
-  profiles: prod
+  profiles: dev
   jpa:
     hibernate:
       ddl-auto: none
