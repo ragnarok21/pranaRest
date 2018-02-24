@@ -2,14 +2,15 @@ spring:
   profiles: dev
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: create-drop
     database: mysql
     show-sql: true
   datasource:
-      url: jdbc:mysql://192.81.211.131:3306/carritoCompra
+      url: jdbc:mysql://localhost:3306/carritoCompra
       username: root
-      password: lalola1415
+      password: root
       driverClassName: com.mysql.jdbc.Driver
+      data: classpath:/scripts/region.sql
 ---
 spring:
    profiles: test
