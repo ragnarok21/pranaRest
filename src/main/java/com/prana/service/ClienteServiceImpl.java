@@ -35,7 +35,7 @@ public class ClienteServiceImpl implements ClienteService{
             cliente.setNombre( "Francisco" );
             cliente.setApellido( "Vergara" );
             cliente.setEmpresa( "Apiux" );
-            cliente.setEmail("asdasdasdad");
+            cliente.setEmail("correo@gmail.com");
             Ciudad ciudad = new Ciudad();
             ciudad.setNombre("San Carlos");
             ciudad.setRegion(region);
