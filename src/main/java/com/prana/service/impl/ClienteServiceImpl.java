@@ -1,4 +1,4 @@
-package com.prana.service;
+package com.prana.service.impl;
 
 import com.prana.domain.Ciudad;
 import com.prana.domain.Cliente;
@@ -6,6 +6,7 @@ import com.prana.domain.Region;
 import com.prana.exceptions.NuevoClienteException;
 import com.prana.repository.ClientDao;
 import com.prana.repository.RegionDao;
+import com.prana.service.ClienteService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,7 @@ import java.util.List;
 
 @Service
 
-public class ClienteServiceImpl implements ClienteService{
+public class ClienteServiceImpl implements ClienteService {
 
     @Autowired
     private ClientDao clientDao;

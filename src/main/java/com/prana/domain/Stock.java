@@ -6,24 +6,25 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
-import java.io.Serializable;
+import java.sql.Timestamp;
 
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @Setter
-public class Ciudad implements Serializable {
+public class Stock {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "ciudad_id")
     private Integer id;
     @Version
     private Integer version;
     @Column
-    private String nombre;
+    private Integer stock;
+    @Column(nullable = false)
+    private Timestamp ultima_actualizacion;
     @ManyToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "region_id")
-    private Region region;
+    @JoinColumn(name = "producto_id")
+    private Producto producto;
 }
