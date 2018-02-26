@@ -19,8 +19,6 @@ public class Region implements Serializable{
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "region_id")
     private Integer id;
-    @Version
-    private Integer version;
     @Column(unique = true)
     private String nombre;
 }
