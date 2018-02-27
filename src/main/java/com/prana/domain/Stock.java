@@ -24,7 +24,4 @@ public class Stock {
     private Integer stock;
     @Column(nullable = false)
     private Timestamp ultima_actualizacion;
-    @ManyToOne(cascade = CascadeType.PERSIST)
-    @JoinColumn(name = "producto_id")
-    private Producto producto;
 }

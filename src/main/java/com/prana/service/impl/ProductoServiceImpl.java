@@ -20,9 +20,6 @@ public class ProductoServiceImpl implements ProductoService {
     @Autowired
     private ProductoDao productoDao;
 
-    @Autowired
-    private StockDao stockDao;
-
     private static final Logger LOGGER = LogManager.getLogger(ClienteServiceImpl.class);
 
 
@@ -39,10 +36,9 @@ public class ProductoServiceImpl implements ProductoService {
         producto.setDescripcion("aguita muy rica");
         producto.setPrecioUnidad(12323);
         producto.setTipoProducto(TipoProducto.EMBOTELLADA);
-        stock.setProducto(producto);
+        producto.setStock(stock);
         try{
             productoDao.save(producto);
-            stockDao.save(stock);
         }catch (Exception e){
             LOGGER.error("Error al crear producto");
         }

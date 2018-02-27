@@ -29,4 +29,7 @@ public class Producto implements Serializable {
     private TipoProducto tipoProducto;
     @Column
     private Integer precioUnidad;
+    @ManyToOne(cascade = CascadeType.PERSIST)
+    @JoinColumn(name = "stock_id")
+    private Stock stock;
 }
