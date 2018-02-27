@@ -4,7 +4,7 @@ import com.prana.domain.Ciudad;
 import com.prana.domain.Cliente;
 import com.prana.domain.Region;
 import com.prana.exceptions.NuevoClienteException;
-import com.prana.repository.ClientDao;
+import com.prana.repository.ClienteDao;
 import com.prana.repository.RegionDao;
 import com.prana.service.ClienteService;
 import org.apache.logging.log4j.LogManager;
@@ -19,7 +19,7 @@ import java.util.List;
 public class ClienteServiceImpl implements ClienteService {
 
     @Autowired
-    private ClientDao clientDao;
+    private ClienteDao clientDao;
 
     @Autowired
     private RegionDao regionDao;
