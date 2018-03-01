@@ -37,9 +37,7 @@ public class TokenAuthenticationService {
                     .getBody()
                     .getSubject();
 
-            return user != null ?
-                    new UsernamePasswordAuthenticationToken(user, null,  Collections.<GrantedAuthority>emptyList()) :
-                    null;
+            return user != null ? new UsernamePasswordAuthenticationToken(user, null,  Collections.<GrantedAuthority>emptyList()) : null;
         }
         return null;
     }
