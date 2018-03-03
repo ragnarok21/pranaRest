@@ -4,7 +4,6 @@ import com.prana.domain.Producto;
 import com.prana.domain.Stock;
 import com.prana.domain.TipoProducto;
 import com.prana.repository.ProductoDao;
-import com.prana.repository.StockDao;
 import com.prana.service.ProductoService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

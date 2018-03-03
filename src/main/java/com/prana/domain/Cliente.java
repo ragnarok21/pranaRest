@@ -8,6 +8,7 @@ import org.hibernate.validator.constraints.Email;
 
 import javax.persistence.*;
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @NoArgsConstructor
@@ -21,6 +22,12 @@ public class Cliente implements Serializable {
     private Integer id;
     @Version
     private Integer version;
+    @Column
+    private String username;
+    @Column
+    private String password;
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private List<Roles> roles;
     @Column
     private String nombre;
     @Column

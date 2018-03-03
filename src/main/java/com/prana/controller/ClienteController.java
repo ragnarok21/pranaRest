@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/clientes")
+@RequestMapping("/prana/clientes")
 @CrossOrigin(origins = "http://localhost:7000")
 public class ClienteController {
 
